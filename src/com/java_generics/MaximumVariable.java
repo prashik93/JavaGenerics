@@ -10,7 +10,7 @@ public class MaximumVariable {
 
         Float p = 7.4f;
         Float q = 8.3f;
-        Float r = 3.8f;
+        Float r = 9.2f;
 
         Integer maximumInteger = checkMaxAmongThreeIntegerNumber(a, b, c);
         Float maximumFloat = checkMaxAmongThreeFloatNumber(p, q, r);
