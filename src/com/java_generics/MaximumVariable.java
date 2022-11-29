@@ -5,7 +5,7 @@ public class MaximumVariable {
     public static void main(String[] args) {
         System.out.println("Welcome to Java Generics!");
         Integer a = 50;
-        Integer b = 00;
+        Integer b = 60;
         Integer c = 40;
 
         Integer maximumInteger = checkMaxAmongThreeNumber(a, b, c);
