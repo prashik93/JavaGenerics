@@ -12,8 +12,8 @@ public class MaximumVariable {
         Float q = 8.3f;
         Float r = 9.2f;
 
-        String x = "Peach";
-        String y = "Apple";
+        String x = "Apple";
+        String y = "Peach";
         String z = "Banana";
 
         Integer maximumInteger = checkMaxAmongThreeIntegerNumber(a, b, c);
