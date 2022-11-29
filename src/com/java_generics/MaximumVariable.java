@@ -13,8 +13,8 @@ public class MaximumVariable {
         Float r = 9.2f;
 
         String x = "Apple";
-        String y = "Peach";
-        String z = "Banana";
+        String y = "Banana";
+        String z = "Peach";
 
         Integer maximumInteger = checkMaxAmongThreeIntegerNumber(a, b, c);
         Float maximumFloat = checkMaxAmongThreeFloatNumber(p, q, r);
