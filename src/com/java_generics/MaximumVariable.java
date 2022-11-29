@@ -12,10 +12,16 @@ public class MaximumVariable {
         Float q = 8.3f;
         Float r = 9.2f;
 
+        String x = "Peach";
+        String y = "Apple";
+        String z = "Banana";
+
         Integer maximumInteger = checkMaxAmongThreeIntegerNumber(a, b, c);
         Float maximumFloat = checkMaxAmongThreeFloatNumber(p, q, r);
+        String maximumString = checkMaxAmongThreeStrings(x, y, z);
         System.out.println("Maximum among 3 Integers Numbers (" + a + ", " + b + ", " + c + ") " + "is : " + maximumInteger);
         System.out.println("Maximum among 3 Float Numbers (" + p + ", " + q + ", " + r + ") " + "is : " + maximumFloat);
+        System.out.println("Maximum among 3 Strings (" + x + ", " + y + ", " + z + ") " + "is : " + maximumString);
     }
 
     public static Integer checkMaxAmongThreeIntegerNumber(Integer a, Integer b, Integer c) {
@@ -36,6 +42,17 @@ public class MaximumVariable {
         }
         if(r.compareTo(maximum) > 0) {
             maximum = r;
+        }
+        return maximum;
+    }
+
+    public static String checkMaxAmongThreeStrings(String x, String y, String z) {
+        String maximum = x;
+        if(y.compareTo(maximum) > 0) {
+            maximum = y;
+        }
+        if(z.compareTo(maximum) > 0) {
+            maximum = z;
         }
         return maximum;
     }
