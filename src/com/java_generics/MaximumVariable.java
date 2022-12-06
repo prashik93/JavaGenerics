@@ -4,11 +4,13 @@ public class MaximumVariable<T extends Comparable<T>> {
      T firstElement;
      T secondElement;
      T thirdElement;
+     T fourthElement;
 
-    public MaximumVariable( T firstElement, T secondElement, T thirdElement) {
+    public MaximumVariable( T firstElement, T secondElement, T thirdElement, T fourthElement) {
     this.firstElement = firstElement;
     this.secondElement = secondElement;
     this.thirdElement = thirdElement;
+    this.fourthElement = fourthElement;
     }
 
     public static void main(String[] args) {
@@ -17,22 +19,24 @@ public class MaximumVariable<T extends Comparable<T>> {
         Integer a = 50;
         Integer b = 60;
         Integer c = 70;
+        Integer d = 80;
 
         Float p = 7.4f;
         Float q = 8.3f;
         Float r = 9.2f;
+        Float s = 9.8f;
 
-        String x = "Apple";
-        String y = "Banana";
+        String w = "Apple";
+        String x = "Banana";
+        String y = "Guava";
         String z = "Peach";
 
-
-        testMaximum(a, b, c);
-        testMaximum(p, q, r);
-        testMaximum(x, y, z);
+        testMaximum(a, b, c, d);
+        testMaximum(p, q, r, s);
+        testMaximum(w, x, y, z);
     }
 
-    public static <T extends Comparable<T>> void testMaximum(T firstElement, T secondElement, T thirdElement) {
+    public static <T extends Comparable<T>> void testMaximum(T firstElement, T secondElement, T thirdElement, T fourthElement) {
         T maximum = firstElement;
         if(secondElement.compareTo(maximum) > 0) {
             maximum = secondElement;
@@ -40,10 +44,13 @@ public class MaximumVariable<T extends Comparable<T>> {
         if(thirdElement.compareTo(maximum) > 0) {
             maximum = thirdElement;
         }
-        printMax( firstElement, secondElement, thirdElement, maximum);
+        if(fourthElement.compareTo(maximum) > 0) {
+            maximum = fourthElement;
+        }
+        printMax( firstElement, secondElement, thirdElement, fourthElement, maximum);
     }
 
-    public static <T> void printMax(T a, T b, T c, T maximum) {
-        System.out.printf("\nMaximum Among Three Elements i.e (%s, %s, %s) is %s. ",a, b, c, maximum);
+    public static <T> void printMax(T a, T b, T c, T d, T maximum) {
+        System.out.printf("\nMaximum Among Three Elements i.e (%s, %s, %s, %s) is %s. ",a, b, c, d, maximum);
     }
 }
