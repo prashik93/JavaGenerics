@@ -1,5 +1,7 @@
 package com.java_generics;
 
+import com.sun.tools.javac.Main;
+
 public class MaximumVariable<T extends Comparable<T>> {
      T firstElement;
      T secondElement;
@@ -31,12 +33,12 @@ public class MaximumVariable<T extends Comparable<T>> {
         String y = "Guava";
         String z = "Peach";
 
-        testMaximum(a, b, c, d);
-        testMaximum(p, q, r, s);
-        testMaximum(w, x, y, z);
+        new MaximumVariable<>(a, b, c, d).testMaximum(a, b, c, d);
+        new MaximumVariable<>(p, q, r, s).testMaximum(p, q, r, s);
+        new MaximumVariable<>(w, x, y, z).testMaximum(w, x, y, z);
     }
 
-    public static <T extends Comparable<T>> void testMaximum(T firstElement, T secondElement, T thirdElement, T fourthElement) {
+    public <T extends Comparable<T>> void testMaximum(T firstElement, T secondElement, T thirdElement, T fourthElement) {
         T maximum = firstElement;
         if(secondElement.compareTo(maximum) > 0) {
             maximum = secondElement;
@@ -50,7 +52,9 @@ public class MaximumVariable<T extends Comparable<T>> {
         printMax( firstElement, secondElement, thirdElement, fourthElement, maximum);
     }
 
-    public static <T> void printMax(T a, T b, T c, T d, T maximum) {
+
+
+    public <T> void printMax(T a, T b, T c, T d, T maximum) {
         System.out.printf("\nMaximum Among Three Elements i.e (%s, %s, %s, %s) is %s. ",a, b, c, d, maximum);
     }
 }
